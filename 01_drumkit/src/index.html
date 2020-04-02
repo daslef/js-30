@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS#1 Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="player.css" />
+</head>
+<body>
+    <div class="wrapper-keys">
+        <div data-key="83" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">S</kbd>
+            <span class="wrapper-keys__key-title noselect">dumpster hat-a</span>
+        </div>
+        <div data-key="68" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">D</kbd>
+            <span class="wrapper-keys__key-title noselect">low goat tom</span>
+        </div>
+        <div data-key="70" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">F</kbd>
+            <span class="wrapper-keys__key-title noselect">phat lofi snare</span>
+        </div>
+        <div data-key="74" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">J</kbd>
+            <span class="wrapper-keys__key-title noselect">scorpion kick</span>
+        </div>
+        <div data-key="75" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">K</kbd>
+            <span class="wrapper-keys__key-title noselect">scorpion snare</span>
+        </div>
+        <div data-key="76" class="wrapper-keys__key">
+            <kbd class="wrapper-keys__key-code noselect">L</kbd>
+            <span class="wrapper-keys__key-title noselect">z&#13barrel</span>
+        </div>
+    </div>
+
+    <div class="player player_inactive">
+        <audio id="audio" src="assets/music/burial.mp3"></audio>
+        <div class="player__ui">
+            <button id="backward" title="Backward"><i class="fa fa-backward fa-2x"></i></button>
+            <button id="play-pause" title="Play"><i class="fa fa-play fa-5x"></i></button>
+            <button id="forward" title="Forward"><i class="fa fa-forward fa-2x"></i></button>
+            <input id="volume" type="range" name="volume" min="0" max="1" step="0.1" value="0.7" />
+            <div class="player__info"></div>
+        </div>
+    </div>
+
+    <div class="sound-files">
+        <audio data-key="83" src="assets/sounds/dumpster.wav"></audio>
+        <audio data-key="68" src="assets/sounds/low-goat.wav"></audio>
+        <audio data-key="70" src="assets/sounds/phat-lofi.wav"></audio>
+        <audio data-key="74" src="assets/sounds/scorpion-kick.wav"></audio>
+        <audio data-key="75" src="assets/sounds/scorpion-snare.wav"></audio>
+        <audio data-key="76" src="assets/sounds/z-barrel.wav"></audio>
+    </div>
+
+    <div class="custom-cursor"></div>
+
+    <script src="index.js"></script>
+    <script src="player.js"></script>
+
+</body>
+</html>

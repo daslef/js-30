@@ -1,0 +1,176 @@
+@import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
+
+.player, .player * {
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.player_active {
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    transition: right 1.5s ease, top 1.5s ease;
+}
+
+.player_inactive {
+    position: fixed;
+    right: -100px;
+    top: -100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.player_inactive:hover {
+    position: fixed;
+    right: -60px;
+    top: -60px;
+    transition: all 0.5s ease-in-out;
+}
+
+.player_inactive .player__ui {
+    background: url(assets/vinyl.jpg);
+    background-size: cover;
+    background-position: 5px 10px;
+}
+
+.player_inactive .player__ui * {
+    display: none;
+}
+
+.player audio {
+    display: none;
+}
+
+.player__ui {
+    opacity: .7;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    background: url(assets/vinyl.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.player__ui:hover {
+    opacity: .95;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.player__ui button {
+    background: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+}
+
+.player__ui button:hover {
+    color: #26C5CB;
+}
+
+button#backward {
+    top: 115px;
+    left: 30px;
+}
+
+button#forward {
+    top: 115px;
+    right: 30px;
+}
+
+button#play-pause {
+    top: 70px;
+    left: 78px;
+}
+
+i {
+    text-shadow: 1px 1px 3px #000;
+}
+
+input#volume {
+    position: absolute;
+    top: 150px;
+    color: white;
+    width: 80px;
+    left: 70px;
+}
+
+.player__info {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 25px;
+    margin: 0;
+    color: #fff;
+}
+
+.player__info span {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.player__info:hover {
+    color: #26C5CB;
+}
+
+input[type='range'] {
+    display: block;
+    margin: 14px auto;
+    width: 80px;
+    height: 2px;
+    outline: 0;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 0 #000;
+    -webkit-appearance: none !important;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    background: #AEAEAE;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    transition: .1s all linear;
+    -webkit-transition: .1s all linear;
+    -webkit-appearance: none !important;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+    background: #26C5CB;
+    -webkit-transform:scale(2);
+}
+
+
+@media all and (max-width: 768px) {
+
+    .player, .player__ui {
+        width: 150px;
+        height: 150px;
+    }
+
+    button#play-pause {
+        top: 40px;
+        left: 50px;
+    }
+
+    input#volume {
+        top: 8px;
+        width: 60px;
+        left: 42px;
+        height: 1px;
+    }
+
+    .player__info {
+        opacity: 0;
+    }
+
+}
