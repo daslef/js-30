@@ -38,10 +38,12 @@ body {
 .clock::after {
     content: "";
     position: absolute;
-    top: calc(50% - 8px);
-    left: calc(50% - 8px);
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
     border-radius: 50%;
-    border: 10px solid black;
+    width: 10px;
+    height: 10px;
+    background: whitesmoke;
 }
 
 .clock__hand {
