@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS/JS/SVG Clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <svg class="clock" viewBox="0 0 40 40">
+        <circle class="clock__circle" cx="20" cy="20" r="19"></circle>
+        <g class="clock__marks">
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+            <line x1="15" y1="0" x2="16" y2="0" />
+        </g>
+        <line class="clock__hand clock__hour" x1="20" y1="20" x2="29" y2="20"></line>
+        <line class="clock__hand clock__minute" x1="20" y1="20" x2="33" y2="20"></line>
+        <line class="clock__hand clock__second" x1="20" y1="20" x2="36" y2="20"></line>
+        <circle class="clock__pin" cx="20" cy="20" r="0.5"></circle>
+        <text x="18" y="25" class="clock__brand">#КВАРЦ</text>
+    </svg>
+    <script src="clock.js"></script>
+</body>
+</html>

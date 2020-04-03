@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #dedede;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 400px;
+    fill: white;
+    stroke: black;
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+.clock__hand {
+    transform-origin: 20px 20px;
+}
+
+.clock__hour {
+    stroke-width: 1;
+}
+
+.clock__minute {
+    stroke-width: 0.6;
+}
+
+.clock__second {
+    stroke-width: 0.3;
+    stroke: #d00505;
+    transform: rotate(0deg);
+}
+
+.clock__pin {
+    stroke-width: 0.2;
+}
+
+.clock__brand {
+    stroke: none;
+    fill: black;
+    font-family: "Malgun Gothic", serif;
+    font-size: 1px;
+}
+
+.clock__marks {
+    transform: translate(20px, 20px);
+    stroke-width: 0.2;
+}
+
+.clock__marks > line:nth-child(1) {
+    transform: rotate(30deg);
+}
+.clock__marks > line:nth-child(2) {
+    transform: rotate(60deg);
+}
+.clock__marks > line:nth-child(3) {
+    transform: rotate(90deg);
+}
+.clock__marks > line:nth-child(4) {
+    transform: rotate(120deg);
+}
+.clock__marks > line:nth-child(5) {
+    transform: rotate(150deg);
+}
+.clock__marks > line:nth-child(6) {
+    transform: rotate(180deg);
+}
+.clock__marks > line:nth-child(7) {
+    transform: rotate(210deg);
+}
+.clock__marks > line:nth-child(8) {
+    transform: rotate(240deg);
+}
+.clock__marks > line:nth-child(9) {
+    transform: rotate(270deg);
+}
+.clock__marks > line:nth-child(10) {
+    transform: rotate(300deg);
+}
+.clock__marks > line:nth-child(11) {
+    transform: rotate(330deg);
+}
+.clock__marks > line:nth-child(12) {
+    transform: rotate(360deg);
+}
+
+.clock__marks > line:nth-child(3),
+.clock__marks > line:nth-child(6),
+.clock__marks > line:nth-child(9),
+.clock__marks > line:nth-child(12) {
+    stroke-width: 0.5;
+}
