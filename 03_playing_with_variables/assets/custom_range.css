@@ -1,0 +1,58 @@
+.image-wrapper__blur-input, .image-wrapper__padding-input {
+    -webkit-appearance: none;
+    outline: none;
+    background: transparent;
+}
+
+.image-wrapper__blur-input::-ms-track, .image-wrapper__padding-input::-ms-track {
+    border-color: transparent;
+    background: transparent;
+    color: transparent;
+}
+
+.image-wrapper__blur-input::-webkit-slider-thumb, .image-wrapper__padding-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 28px;
+    width: 16px;
+    border-radius: 3px;
+    background: #777777;
+    cursor: ew-resize;
+}
+
+.image-wrapper__blur-input::-moz-range-thumb, .image-wrapper__padding-input::-moz-range-thumb {
+    height: 28px;
+    width: 16px;
+    border-radius: 3px;
+    background: #777777;
+    cursor: pointer;
+}
+
+.image-wrapper__blur-input::-ms-thumb, .image-wrapper__padding-input::-ms-thumb {
+    height: 28px;
+    width: 16px;
+    border-radius: 3px;
+    background: #777777;
+    cursor: pointer;
+}
+
+.image-wrapper__blur-input::-webkit-slider-runnable-track, .image-wrapper__padding-input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 28px;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}
+
+.image-wrapper__blur-input::-moz-range-track, .image-wrapper__padding-input::-moz-range-track {
+    height: 28px;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}
+
+.image-wrapper__blur-input::-ms-track, .image-wrapper__padding-input::-ms-track {
+    height: 28px;
+    border-radius: 3px;
+    background: white;
+    cursor: pointer;
+}

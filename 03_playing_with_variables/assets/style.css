@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+:root {
+    --padding: 5px;
+    --color: #777777;
+    --blur: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gotu', sans-serif;
+    background-color: whitesmoke;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 650px;
+    width: 1100px;
+}
+
+.image-wrapper__heading {
+    font-size: 42px;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.image-wrapper__ui {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.image-wrapper__ui * {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 20px;
+    border: 0;
+}
+
+.image-wrapper__style-toggler {
+    text-align: center;
+    color: #777777;
+    border-bottom: 1px dashed #333333;
+    cursor: pointer;
+    width: 180px;
+    margin: 10px auto;
+}
+
+.image-wrapper__image {
+    height: 400px;
+    width: 100%;
+    background-color: var(--color);
+    transition: background-color 0.7s ease-in;
+}
+
+.image-wrapper__image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 400px;
+    padding: var(--padding);
+    filter: blur(var(--blur));
+    transition: all 0.7s ease-in;
+}

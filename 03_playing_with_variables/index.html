@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playing with CSS-variables</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/custom_range.css">
+</head>
+<body>
+    <div class="image-wrapper">
+        <div class="image-wrapper__heading">Change dat babies!</div>
+        <div class="image-wrapper__ui">
+            <div class="image-wrapper__padding-wrapper">
+                <span class="image-wrapper__padding-span">Padding</span>
+                <input class="image-wrapper__padding-input" type="range" min="0" max="100" value="5" name="padding" data-suffix="px">
+            </div>
+            <div class="image-wrapper__blur-wrapper">
+                <span class="image-wrapper__blur-span">Blur</span>
+                <input class="image-wrapper__blur-input" type="range" min="0" max="20" value="0" name="blur" data-suffix="px">
+            </div>
+            <div class="image-wrapper__color-wrapper">
+                <span class="image-wrapper__color-span">Background</span>
+                <input class="image-wrapper__color-input" type="color" name="color" value="#777777" data-suffix="">
+            </div>
+        </div>
+        <div class="image-wrapper__image">
+            <img src="assets/sample.jpg">
+        </div>
+        <p class="image-wrapper__style-toggler">disable custom range</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
