@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-size: 40px;
+    font-family: 'Roboto Slab', serif;
+    overflow: hidden;
+}
+
+.panels {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+    text-transform: uppercase;
+    transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+                flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+                background 0.2s;}
+
+.panels > p {
+    color: white;
+    margin: 0 5px;
+    transition: transform 0.5s;
+}
+
+.panels > p:first-of-type {
+    transform: translateY(-50vh);
+}
+
+.panels > p:nth-of-type(2) {
+    font-size: 3.3vw;
+    z-index: 2;
+}
+
+.panels > p:last-of-type {
+    transform: translateY(50vh);
+}
+
+.panels_open {
+    flex: 5;
+}
+
+.panels_active > p:first-of-type {
+    transform: none;
+}
+
+.panels_active > p:last-of-type {
+    transform: none;
+}
+
+.panels__panel1 {
+    background: url('assets/panel1.jpg');
+}
+
+.panels__panel2 {
+    background: center / cover url('assets/panel2.jpg') no-repeat;
+}
+
+.panels__panel3 {
+    background: center / cover url('assets/panel3.jpg') no-repeat;
+}
+
+.panels__panel4 {
+    background: center / cover url('assets/panel4.jpg') no-repeat;
+}
+
+.panels__panel5 {
+    background: center / cover url('assets/panel5.jpg') no-repeat;
+}
+
+.panels__line {
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1100px) {
+    .panels > p:nth-of-type(2) {
+        font-size: 20px;
+    }
+}
