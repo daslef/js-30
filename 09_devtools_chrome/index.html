@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chrome DevTools</title>
+</head>
+<body>
+    <p>This is a console challenge, so... F12 and Look to the right, pal!</p>
+    <script>
+
+        const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+        function makeGreen() {
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '50px';
+        }
+
+        // Regular
+        console.log('hello')
+
+        // Interpolated
+        console.log(`hi, i am ${dogs[0].name}`)
+
+        // Styled
+        console.log(`%c hi, i am ${dogs[0].name}`, 'font-size: 32px; color: #ccceee')
+
+        // warning!
+        console.warn('deprecated')
+
+        // Error :|
+        console.error('oh no1')
+
+        // Info
+        console.info('there is a moon, you know?')
+
+        // Testing
+        console.assert(3 === 2, 'Assertion Error')
+
+        // clearing
+        // console.clear()
+
+        // Viewing DOM Elements
+        let p = document.querySelector('p')
+        console.log(p)
+        console.dir(p)
+
+        // Grouping together
+        dogs.forEach(dog => {
+            console.group(dog.name)
+            console.log(`dog name: ${dog.name}`)
+            console.log(`dog age: ${dog.age}`)
+            console.groupEnd()
+        })
+
+        // counting
+        console.count('a')
+        console.count('a')
+        console.count('b')
+        console.count('a')
+        console.count('b')
+        console.count('a')
+        console.count('c')
+
+        // timing
+        console.time('fetching')
+        fetch('http://ya.ru/')
+            .then(data => data.json())
+            .catch(e => console.log(e))
+            .then(() => {
+                console.timeEnd('fetching')
+            })
+
+    </script>
+</body>
+</html>
