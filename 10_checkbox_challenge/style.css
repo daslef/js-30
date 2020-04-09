@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    font-family: 'Josefin Slab', serif;
+}
+
+img {
+    max-height: 2rem;
+    position: relative;
+    top: 8px;
+    filter: opacity(0.8);
+}
+
+.inbox {
+    width: 420px;
+    border: 2px solid rgba(100, 100, 100, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inbox__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+.inbox__item:last-of-type {
+    border-bottom: 0;
+}
+
+.inbox__p {
+    flex: 1;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+    border-left: 1px solid rgba(100, 100, 100, 0.1);
+}
+
+.inbox__input {
+    margin: 10px 10px;
+    outline: none;
+}
+
+.inbox__input:checked ~ .inbox__p {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 620px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .inbox {
+        width: 98%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    html {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
