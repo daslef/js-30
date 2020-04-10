@@ -1,3 +1,6 @@
+const videoSrc = ['assets/foggy_x264.mp4', 'assets/ocean_x264.mp4', 'assets/ophtal_x264.mp4']
+let currentVideoIx = 1
+
 const canvas = document.querySelector('canvas');
 const wrapper = document.querySelector('.video-player');
 const video = document.querySelector('.video-player__video');
@@ -5,13 +8,15 @@ const ui = document.querySelector('.video-player__ui');
 const playButton = document.querySelector('.video-player__play-pause')
 const progressWrapper = document.querySelector('.video-player__progress-wrapper')
 const progressBar = document.querySelector('.video-player__progress-bar')
+const menu = document.querySelector('.video-player__menu')
 
 const timing = document.querySelector('.remote__time')
 const remoteForward = document.querySelector('.remote__forward')
 const remoteBackward = document.querySelector('.remote__backward')
 const remotePlay = document.querySelector('g#Play')
-const remoteSound = document.querySelector('g#Sound')
+const remoteMenu = document.querySelector('g#Menu')
 
+let menuMode = false
 
 const ctx = canvas.getContext('2d');
 let durationMinutes, durationSeconds
@@ -93,10 +98,21 @@ function updateTime() {
 function updateHandler() {
     progressBar.style.width = `${this.currentTime / this.duration * 100}%`
     updateTime()
-    capture()
+    try {
+        capture()
+    } catch {
+        console.warn('changing videosrc?')
+    }
+
 }
 
 function playButtonHandler() {
+    if (menuMode) {
+        video.setAttribute('src', videoSrc[currentVideoIx])
+        video.load()
+        menuButtonHandler()
+    }
+
     if (video.paused) {
         video.play()
     } else {
@@ -104,12 +120,43 @@ function playButtonHandler() {
     }
 }
 
+function getNextVideoIx(direction) {
+    if (direction === 'forward') {
+        return (currentVideoIx === 2) ? 0 : currentVideoIx+1
+    } else {
+        return (currentVideoIx === 0) ? 2 : currentVideoIx-1
+    }
+}
+
 function forwardButtonHandler() {
-    video.currentTime += 5
+    if (!menuMode) {
+        video.currentTime += 5
+    } else {
+        currentVideoIx = getNextVideoIx('forward')
+        if (menu.style.transform === "") {
+            menu.style.transform = "translateX(-33%)"
+        } else if (menu.style.transform === "translateX(33%)") {
+            menu.style.transform = ""
+        }
+    }
 }
 
 function backwardButtonHandler() {
-    video.currentTime -= 5
+    if (!menuMode){
+        video.currentTime -= 5
+    } else {
+        currentVideoIx = getNextVideoIx('backward')
+        if (menu.style.transform === "") {
+            menu.style.transform = "translateX(33%)"
+        } else if (menu.style.transform === "translateX(-33%)") {
+            menu.style.transform = ""
+        }
+    }
+}
+
+function menuButtonHandler() {
+    menuMode = !menuMode
+    menu.classList.toggle('video-player__menu_active')
 }
 
 video.addEventListener('loadedmetadata', () => {
@@ -128,3 +175,4 @@ progressWrapper.addEventListener('click', changeTimingHandler)
 remoteForward.addEventListener('click', forwardButtonHandler)
 remoteBackward.addEventListener('click', backwardButtonHandler)
 remotePlay.addEventListener('click', playButtonHandler)
+remoteMenu.addEventListener('click', menuButtonHandler)

@@ -28,12 +28,7 @@ svg {
     right: 5vw;
 }
 
-svg g#Play {
-    cursor: pointer;
-    pointer-events: visible;
-}
-
-svg g#Sound {
+g#Play, g#Sound, g#Menu {
     cursor: pointer;
     pointer-events: visible;
 }
@@ -52,6 +47,7 @@ svg g#Sound {
     box-shadow: 6px -4px 4px 0 black;
     border: 2px solid;
     background: #111111;
+    overflow: hidden;
 }
 
 .video-player__video {
@@ -102,7 +98,7 @@ svg g#Sound {
 
 .remote__menu {
     font-size: 22px;
-    font-family: 'Rajdhani', sans-serif;`
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .remote__time {
@@ -110,7 +106,34 @@ svg g#Sound {
     font-family: 'Rajdhani', sans-serif;
 }
 
-image {
-    opacity: 0.6;
-    fill: grey;
+.video-player__menu {
+    display: none;
+    height: 80%;
+    position: absolute;
+    top: 15%;
+    left: -50%;
+    width: 200%;
+}
+
+.video-player__menu_active {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.video-player__menu > div {
+    width: 60%;
+    height: inherit;
+    margin: 0 10px;
+}
+
+.video-player__menu > div#first-video {
+    background: center / cover url("assets/foggy_x264_snapshot.jpg");
+}
+
+.video-player__menu > div#second-video {
+    background: center / cover url("assets/ocean_x264_snapshot.jpg");
+}
+
+.video-player__menu > div#third-video {
+    background: center / cover url("assets/ophtal_x264_snapshot.jpg");
 }
