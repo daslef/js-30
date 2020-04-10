@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+html {
+    background: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url(assets/background_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+canvas, audio {
+    display: none;
+}
+
+svg {
+    position: fixed;
+    right: 5vw;
+}
+
+svg g#Play {
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+svg g#Sound {
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.remote__forward, .remote__backward {
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.video-player {
+    position: absolute;
+    outline: none;
+    border-radius: 8px;
+    top: 26vh;
+    left: 40vw;
+    box-shadow: 6px -4px 4px 0 black;
+    border: 2px solid;
+    background: #111111;
+}
+
+.video-player__video {
+    display: block;
+    width: 380px;
+    border: 0;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.video-player__ui {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+}
+
+.video-player__button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 10px;
+
+}
+
+.video-player__progress-wrapper {
+    background-color: #bbbbbb;
+    width: 85%;
+    cursor: pointer;
+}
+
+.video-player__progress-bar {
+    height: 3px;
+    background-color: cornflowerblue;
+    width: 0%;
+    pointer-events: none
+}
+
+.remote__menu {
+    font-size: 22px;
+    font-family: 'Rajdhani', sans-serif;`
+}
+
+.remote__time {
+    font-size: 18px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+image {
+    opacity: 0.6;
+    fill: grey;
+}
