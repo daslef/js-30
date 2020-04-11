@@ -1,4 +1,4 @@
-const videoSrc = ['assets/foggy_x264.mp4', 'assets/ocean_x264.mp4', 'assets/ophtal_x264.mp4']
+const videoSrc = ['assets/video/foggy_x264.mp4', 'assets/video/ocean_x264.mp4', 'assets/video/ophtal_x264.mp4']
 let currentVideoIx = 1
 let expanded = false
 
