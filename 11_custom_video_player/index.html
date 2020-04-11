@@ -2,48 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
     <title>Custom HTML5 Video Player</title>
     <link rel="stylesheet" href="style_base.css">
     <link rel="stylesheet" href="style_svg.css">
 </head>
 <body>
-    <div class="video-player">
-        <video class="video-player__video" src="assets/ocean_x264.mp4" preload="auto" loop></video>
-        <div class="video-player__progress-wrapper">
-            <div class="video-player__progress-bar"></div>
-        </div>
-        <div class="video-player__menu">
-            <div id="first-video"></div>
-            <div id="second-video"></div>
-            <div id="third-video"></div>
-        </div>
+<div class="video-player">
+    <video class="video-player__video" src="assets/video/ocean_x264.mp4" type="video/mp4" preload="auto" loop></video>
+    <div class="video-player__progress-wrapper">
+        <div class="video-player__progress-bar"></div>
     </div>
+    <div class="video-player__menu">
+        <div id="first-video"></div>
+        <div id="second-video"></div>
+        <div id="third-video"></div>
+    </div>
+</div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 720" width="400" height="720">
-        <style>
-            tspan { white-space:pre }
-            .shp1 { fill: none; stroke: #9b9b9b; paint-order:stroke fill markers; stroke-width: 4 }
-            .shp2 { fill: #9b9b9b !important;}
-            .shp3 { fill: rgba(2,2,2,0.2); stroke: #9b9b9b }
-        </style>
-        <g id="Outline">
-            <path class="shp1" d="M119 37L288 37C315.65 37 338 59.35 338 87L338 412L338 412L69 412L69 412L69 87C69 59.35 91.35 37 119 37Z" />
-            <path class="shp1" d="
-                M 338 415
-                v 250
-                h -269
-                v -250 Z" />
-            <path class="shp2" d="M195 62L211 62C212.66 62 214 63.34 214 65L214 65C214 66.66 212.66 68 211 68L195 68C193.34 68 192 66.66 192 65L192 65C192 63.34 193.34 62 195 62Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 940" width="400" height="940">
+    <style>
+        tspan { white-space:pre }
+        .shp1 { fill: none; stroke: #9b9b9b; paint-order:stroke fill markers; stroke-width: 4 }
+        .shp2 { fill: #9b9b9b !important;}
+        .shp3 { fill: rgba(2,2,2,0.2); stroke: #9b9b9b }
+    </style>
+    <g id="Outline">
+        <path class="shp1" d="M119 37L288 37C315.65 37 338 59.35 338 87L338 412L338 412L69 412L69 412L69 87C69 59.35 91.35 37 119 37Z" />
+        <path class="shp1" d="M69 415L338 415L338 415L338 851C338 878.65 315.65 901 288 901L119 901C91.35 901 69 878.65 69 851L69 415L69 415Z" />
+        <path class="shp2" d="M195 62L211 62C212.66 62 214 63.34 214 65L214 65C214 66.66 212.66 68 211 68L195 68C193.34 68 192 66.66 192 65L192 65C192 63.34 193.34 62 195 62Z" />
+    </g>
+    <g id="Ui">
+        <text class="remote__time" x="216" y="360" fill="#cccccc">00:00 / 00:00</text>
+        <g id="Menu">
+            <path class="shp3 menu__border" d="M143.5 399C168.08 399 188 379.08 188 354.5C188 329.92 168.08 310 143.5 310C118.92 310 99 329.92 99 354.5C99 379.08 118.92 399 143.5 399Z" />
+            <text class="remote__menu" x="117" y="362" fill="#9b9b9b">MENU</text>
         </g>
-        <g id="Ui">
-            <text class="remote__time" x="216" y="360" fill="#cccccc">00:00 / 00:00</text>
-            <g id="Menu">
-                <path class="shp3 menu__border" d="M143.5 399C168.08 399 188 379.08 188 354.5C188 329.92 168.08 310 143.5 310C118.92 310 99 329.92 99 354.5C99 379.08 118.92 399 143.5 399Z" />
-                <text class="remote__menu" x="117" y="362" fill="#9b9b9b">MENU</text>
-            </g>
-            <g id="Forward">
-                <path class="shp3 menu__border" d="
+        <g id="Forward">
+            <path class="shp3 menu__border" d="
                     M 262 427
                     L 262 427
                     C 285.23 427 304 445.77 304 469
@@ -52,10 +47,10 @@
                     v -45
                     C 220 445.77 238.77 427 262 427
                     Z" />
-                <path id="shape-forward" class="remote__forward shp2" d="M250 458L250 481L260 469L250 458ZM265 458L265 481L275 469L265 458Z" />
-            </g>
-            <g id="Backward">
-                <path class="shp3 menu__border" d="
+            <path id="shape-forward" class="remote__forward shp2" d="M250 458L250 481L260 469L250 458ZM265 458L265 481L275 469L265 458Z" />
+        </g>
+        <g id="Backward">
+            <path class="shp3 menu__border" d="
                     M 304 529
                     v 55
                     C 304 607.23 285.23 626 262 626
@@ -63,20 +58,21 @@
                     C 238.77 626 220 607.23 220 584
                     v -55
                     Z" />
-                <path id="shape-backward" class="remote__backward shp2" d="M259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567Z M273 567L273 590L263 578L273 567Z" />
-            </g>
-            <g id="Expand">
-                <path class="shp3 menu__border" d="M146.5 516C171.08 516 191 496.08 191 471.5C191 446.92 171.08 427 146.5 427C121.92 427 102 446.92 102 471.5C102 496.08 121.92 516 146.5 516Z" />
-                <image width="40" height="40" x="126" y="452" href="assets/expand-solid.svg"/>
-            </g>
-            <g id="Play">
-                <path class="shp3 menu__border" d="M146.5 626C171.08 626 191 606.08 191 581.5C191 556.92 171.08 537 146.5 537C121.92 537 102 556.92 102 581.5C102 606.08 121.92 626 146.5 626Z" />
-                <path id="PlayPause" fill-rule="evenodd" class="shp2" d="M155.09 590L155.09 572L152 572L152 590L155.09 590ZM162 590L162 572L158.91 572L158.91 590L162 590ZM133.45 572.14C133.3 572.05 133.13 572 132.94 572C132.69 572 132.47 572.09 132.28 572.28C132.09 572.47 132 572.69 132 572.94L132 589.06C132 589.31 132.09 589.53 132.28 589.72C132.47 589.91 132.69 590 132.94 590C133.09 590 133.27 589.95 133.45 589.86L146.48 582.08C146.83 581.8 147 581.44 147 581C147 580.56 146.83 580.2 146.48 579.92L133.45 572.14Z" />
-            </g>
+            <path id="shape-backward" class="remote__backward shp2" d="M259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567ZM259 567L259 590L249 578L259 567Z M273 567L273 590L263 578L273 567Z" />
         </g>
-    </svg>
+        <g id="Expand">
+            <path class="shp3 menu__border" d="M146.5 516C171.08 516 191 496.08 191 471.5C191 446.92 171.08 427 146.5 427C121.92 427 102 446.92 102 471.5C102 496.08 121.92 516 146.5 516Z" />
+            <image width="40" height="40" x="126" y="452" href="assets/expand-solid.svg"/>
+        </g>
+        <g id="Play">
+            <path class="shp3 menu__border" d="M146.5 626C171.08 626 191 606.08 191 581.5C191 556.92 171.08 537 146.5 537C121.92 537 102 556.92 102 581.5C102 606.08 121.92 626 146.5 626Z" />
+            <path id="PlayPause" fill-rule="evenodd" class="shp2" d="M155.09 590L155.09 572L152 572L152 590L155.09 590ZM162 590L162 572L158.91 572L158.91 590L162 590ZM133.45 572.14C133.3 572.05 133.13 572 132.94 572C132.69 572 132.47 572.09 132.28 572.28C132.09 572.47 132 572.69 132 572.94L132 589.06C132 589.31 132.09 589.53 132.28 589.72C132.47 589.91 132.69 590 132.94 590C133.09 590 133.27 589.95 133.45 589.86L146.48 582.08C146.83 581.8 147 581.44 147 581C147 580.56 146.83 580.2 146.48 579.92L133.45 572.14Z" />
+        </g>
+    </g>
+</svg>
 
-    <canvas id="canvas" style="overflow:auto"></canvas>
-    <script src="index.js"></script>
+<audio src="assets/audio.mp3"></audio>
+<canvas id="canvas" style="overflow:auto"></canvas>
+<script src="index.js"></script>
 </body>
 </html>

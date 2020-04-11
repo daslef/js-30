@@ -5,25 +5,36 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    background: url(assets/jpeg/background_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    overflow: hidden;
-    background: url("assets/background_1.jpg") no-repeat;
-    background-size: cover;
-    background-position: bottom center;
 }
 
 canvas {
-    display: none;
+    position: fixed;
+    top: 15vh;
+    right: calc(5vw + 96px);
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .video-player {
-    width: fit-content;
+    position: absolute;
     outline: none;
     border-radius: 8px;
+    top: 26vh;
+    left: 40vw;
     box-shadow: 6px -4px 4px 0 black;
     border: 2px solid;
     background: #111111;
@@ -32,7 +43,7 @@ canvas {
 
 .video-player__video {
     display: block;
-    width: calc(340px); //360
+    width: 380px;
     border: 0;
     border-radius: inherit;
     border-bottom-left-radius: 0;
@@ -53,6 +64,14 @@ canvas {
     background-color: cornflowerblue;
     width: 0%;
     pointer-events: none;
+}
+
+.remote__menu {
+    font-size: 22px;
+}
+
+.remote__time {
+    font-size: 18px;
 }
 
 .video-player__menu {
@@ -76,31 +95,13 @@ canvas {
 }
 
 .video-player__menu > div#first-video {
-    background: center / cover url("assets/foggy_x264_snapshot.jpg");
+    background: center / cover url("assets/jpeg/foggy_x264_snapshot.jpg");
 }
 
 .video-player__menu > div#second-video {
-    background: center / cover url("assets/ocean_x264_snapshot.jpg");
+    background: center / cover url("assets/jpeg/ocean_x264_snapshot.jpg");
 }
 
 .video-player__menu > div#third-video {
-    background: center / cover url("assets/ophtal_x264_snapshot.jpg");
-}
-
-@media screen and (min-width: 1460px) {
-
-    .video-player {
-        position: absolute;
-        bottom: calc(20px + 34vw);
-        left: calc(50% - 340px / 2);
-    }
-}
-
-@media screen and (max-width: 1460px) {
-
-    .video-player {
-        position: absolute;
-        bottom: 500px;
-        left: calc(50% - 340px / 2);
-    }
+    background: center / cover url("assets/jpeg/ophtal_x264_snapshot.jpg");
 }
