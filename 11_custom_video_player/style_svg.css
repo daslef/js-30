@@ -1,6 +1,24 @@
+canvas {
+    display: block;
+    position: fixed;
+    bottom: 47vh;
+    right: calc(5vw + 96px);
+    padding: 8px;
+    box-sizing: border-box;
+}
+
 svg {
     position: fixed;
-    right: 5vw;
+    right: 5%;
+    bottom: -5px;
+}
+
+.remote__menu {
+    font-size: 22px;
+}
+
+.remote__time {
+    font-size: 18px;
 }
 
 .menu__border {
@@ -17,7 +35,7 @@ g#Outline {
 }
 
 g#Outline path {
-    fill: rgba(0,0,0,0.4);
+    fill: rgba(200,200,200,0.1);
 }
 
 g#Ui text {
@@ -26,7 +44,7 @@ g#Ui text {
 
 g#Ui > g:hover > .menu__border,
 g#Ui > g:focus > .menu__border {
-    stroke-width: 4;
+    fill: rgba(2,2,2,0.4);
 }
 
 g#Ui > g:active > .menu__border {
@@ -47,4 +65,58 @@ g#Ui > g:hover > *:nth-child(1) {
 g#Play, g#Sound, g#Menu, g#Expand, g#Forward, g#Backward {
     cursor: pointer;
     pointer-events: visible;
+}
+
+@media screen and (max-width: 1340px) {
+    svg {
+        right: 2vw;
+        width: 300px;
+        height: 705px;
+    }
+
+    canvas {
+        bottom: 43vh;
+        width: 160px;
+        right: calc(2vw + 68px);
+    }
+
+    g#Outline path {
+        fill: rgba(200,200,200,0.15);
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    svg {
+        right: 14vw;
+        bottom: 5vh;
+        width: 200px;
+        height: 430px;
+    }
+
+    canvas {
+        top: 61vh;
+        width: 100px;
+        right: calc(14vw + 48px);
+        border-width: 1px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    svg {
+        right: 14vw;
+        bottom: 5vh;
+        height: 330px;
+    }
+    canvas {
+        top: 67vh;
+        width: 80px;
+        right: calc(14vw + 59px);
+        border-width: 1px;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    svg, canvas {
+        display: none;
+    }
 }

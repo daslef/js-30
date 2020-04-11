@@ -5,6 +5,7 @@ let expanded = false
 const canvas = document.querySelector('canvas');
 const wrapper = document.querySelector('.video-player');
 const video = document.querySelector('.video-player__video');
+const image = document.querySelector('img')
 
 let WIDTH, HEIGHT
 
