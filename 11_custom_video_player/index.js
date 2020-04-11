@@ -5,6 +5,7 @@ let expanded = false
 const canvas = document.querySelector('canvas');
 const wrapper = document.querySelector('.video-player');
 const video = document.querySelector('.video-player__video');
+const image = document.querySelector('img')
 
 let WIDTH, HEIGHT
 
@@ -57,9 +58,9 @@ function capture() {
     let frame = ctx.getImageData(0, 0, WIDTH, HEIGHT);
     let [top_mean, bottom_mean, left_mean, right_mean] = processImage(frame.data)
 
-    for (let x of [top_mean, bottom_mean]) {
-        console.log(`%c ${'❚'.repeat(30)};`, `color: rgb(${x[0]}, ${x[1]}, ${x[2]})`)
-    }
+    // for (let x of [top_mean, bottom_mean]) {
+    //     console.log(`%c ${'❚'.repeat(30)};`, `color: rgb(${x[0]}, ${x[1]}, ${x[2]})`)
+    // }
 
     canvas.style.border = "4px solid"
     canvas.style.borderTopColor = `rgba(${top_mean.join(',')})`
@@ -171,10 +172,14 @@ function expandButtonHandler() {
         document.body.style.backgroundSize = "210%"
         document.body.style.backgroundPositionY = "41%"
         document.querySelector('svg').style.right = '2vw'
+        canvas.style.right = `${0.02 * window.innerWidth + 96}px`
+
     } else {
         video.style.width = "380px"
         wrapper.style.left = "40vw"
         wrapper.style.top = "26vh"
+        canvas.style.top = "15vh"
+        canvas.style.right = `${0.05 * window.innerWidth + 96}px`
         document.body.style.filter = "opacity: 1"
         document.body.style.backgroundSize = "cover"
         document.body.style.backgroundPositionY = "center"
