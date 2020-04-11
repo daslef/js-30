@@ -1,0 +1,50 @@
+svg {
+    position: fixed;
+    right: 5vw;
+}
+
+g#Outline {
+    pointer-events: visible;
+}
+
+g#Outline path {
+    fill: rgba(0,0,0,0.4);
+}
+
+.menu__border {
+    fill: rgba(2,2,2,0.2);
+    stroke-dasharray: 0, 350;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+g#Ui text {
+    user-select: none;
+}
+
+g#Ui > g:hover > .menu__border,
+g#Ui > g:focus > .menu__border {
+    stroke-width: 4;
+}
+
+g#Ui > g:active > .menu__border {
+    stroke-width: 6;
+    stroke-dasharray: 265, 0;
+    stroke-dashoffset: 20;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+g#Ui > g:hover > *:nth-child(1) {
+    stroke: cornflowerblue;
+}
+
+g#Play, g#Sound, g#Menu, g#Expand, g#Forward, g#Backward {
+    cursor: pointer;
+    pointer-events: visible;
+}
