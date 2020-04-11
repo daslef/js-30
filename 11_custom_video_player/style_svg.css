@@ -3,14 +3,6 @@ svg {
     right: 5vw;
 }
 
-g#Outline {
-    pointer-events: visible;
-}
-
-g#Outline path {
-    fill: rgba(0,0,0,0.4);
-}
-
 .menu__border {
     fill: rgba(2,2,2,0.2);
     stroke-dasharray: 0, 350;
@@ -18,6 +10,14 @@ g#Outline path {
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 250ms ease-in-out;
+}
+
+g#Outline {
+    pointer-events: visible;
+}
+
+g#Outline path {
+    fill: rgba(0,0,0,0.4);
 }
 
 g#Ui text {
