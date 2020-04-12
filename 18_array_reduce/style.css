@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Latee', sans-serif;
+    background: #9C89B8;
+}
+
+p {
+    font-size: 40px;
+    color: #F0A6CA;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+ul {
+    color: #F0E6EF;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    padding: 40px;
+    border: 1px dashed #F0E6EF;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
