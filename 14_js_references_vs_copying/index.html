@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Reference VS Copy</title>
+</head>
+<body>
+    <script>
+        const players = ['Wes', 'Sarah', 'Ryan', 'Poppy']
+        const person = { name: 'Wes Bos', age: 80 }
+
+        const playersCopy1 = Array.from(players)
+        const playersCopy2 = players.slice()
+        const playersCopy3 = [].concat(players)
+        const playersCopy4 = [...players]
+
+        const personCopy1 = Object.assign({}, person, {name: "Lex", occupation: "Teacha"})
+        const personCopy2 = {...person}
+        const personCopy3 = JSON.parse(JSON.stringify(person)) // to avoid 1 level deep
+    </script>
+</body>
+</html>
