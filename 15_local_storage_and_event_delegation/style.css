@@ -1,0 +1,79 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    background: url(https://cdn.dribbble.com/users/1183194/screenshots/6655945/cam_07_day_no_sign_2.jpg) center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+svg {
+    fill:white;
+    background: rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 50%;
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.plates {
+    padding: 20px;
+    max-width: 350px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.1);
+}
+
+.plates__heading {
+    text-align: center;
+    margin: 0;
+    font-weight: 200;
+}
+
+.plates__form {
+    margin-top: 20px;
+}
+
+.plates__form input {
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.plates__ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+}
+
+.plates__li {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 0;
+    font-weight: 100;
+    display: flex;
+}
+
+.plates__plate-title {
+    flex: 1;
+    cursor: pointer;
+}
+
+.plates__plate-checkbox {
+    display: none;
+}
+
+.plates__plate-checkbox + .plates__plate-title:before {
+    content: '⬜️';
+    margin-right: 10px;
+}
+
+.plates__plate-checkbox:checked + .plates__plate-title:before {
+    content: '🌮';
+}
