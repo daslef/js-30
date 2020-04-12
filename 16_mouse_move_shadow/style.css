@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: #97BC62;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper__text {
+    font-size: 100px;
+    color: #2C5F2D;
+}
