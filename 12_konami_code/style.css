@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+body {
+    margin: 0; background-color: #FEE715; text-align: center;
+}
+
+h1 {
+    margin: 50vh 0 10vh 0;
+    font-family: 'Titillium Web', sans-serif;
+    color: #101820;
+}
+
+canvas {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+kbd {
+    background-color: #ddd;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 1.5vw;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+    margin-right: 4px;
+}
+
+.active {
+    position: relative;
+    animation: jump 0.5s ease-in;
+}
+
+@keyframes jump {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -2px;
+        background: #FEE715;
+    }
+    100% {
+        top: 0;
+        background: initial;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    kbd{
+        font-size: 3.5vw;
+    }
+    h1 {
+        margin-top: 40vh;
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    kbd {
+        display: block;
+        width: 40vw;
+        margin: 0 30vw 1vh 30vw;
+        font-size: 4.5vw;
+    }
+    h1 {
+        margin-top: 20vh;
+    }
+}
