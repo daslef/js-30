@@ -1,0 +1,77 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+    background: #ffc600;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    margin: 0;
+}
+
+.app {
+    width: 60vw;
+    margin: 2rem auto;
+    border: 2px solid indianred;
+    border-radius: 2px;
+}
+
+/*clearfix*/
+.app:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.app__controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:120px;
+}
+
+.app__canvas {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.app__video {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+}
+
+.app__snapshot-wrapper {
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app__snapshot-wrapper img {
+    width: 100px;
+    overflow-x: scroll;
+    padding: 0.8rem 0.8rem 2.5rem 0.8rem;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    background: white;
+}
+
+.app__snapshot-wrapper a:nth-child(5n+1) img { transform: rotate(10deg); }
+.app__snapshot-wrapper a:nth-child(5n+2) img { transform: rotate(-2deg); }
+.app__snapshot-wrapper a:nth-child(5n+3) img { transform: rotate(8deg); }
+.app__snapshot-wrapper a:nth-child(5n+4) img { transform: rotate(-11deg); }
+.app__snapshot-wrapper a:nth-child(5n+5) img { transform: rotate(12deg); }
+
+
+p, label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}

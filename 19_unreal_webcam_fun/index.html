@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get User Media Code Along!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="app__controls">
+            <button class="app__photo-button">Take Photo</button>
+            <div class="app__image-effects">
+                <label for="none">None</label>
+                <input id="none" type="radio" name="effect" value="none" checked>
+                <label for="red">Reddish</label>
+                <input id="red" type="radio" name="effect" value="red">
+                <label for="rgb">RBG Split</label>
+                <input id="rgb" type="radio" name="effect" value="rgb">
+                <label for="blue">Blue</label>
+                <input id="blue" type="radio" name="effect" value="blue">
+            </div>
+            <div class="app__canvas-effects">
+                <label for="ghost">Ghosty</label>
+                <input id="ghost" type="range" min="0" max="1" step="0.05" value="1">
+            </div>
+        </div>
+        <canvas class="app__canvas"></canvas>
+        <video class="app__video"></video>
+        <div class="app__snapshot-wrapper"></div>
+    </div>
+    <audio class="audio" src="https://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+    <script src="scripts.js"></script>
+</body>
+</html>
