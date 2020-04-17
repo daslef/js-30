@@ -2,27 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Get User Media Code Along!</title>
+    <title>Fun with WebCam!</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_radio.css">
+    <link rel="stylesheet" href="style_button.css">
+    <link rel="stylesheet" href="style_snapshot.css">
+
 </head>
 <body>
     <div class="app">
-        <div class="app__controls">
-            <button class="app__photo-button">Take Photo</button>
-            <div class="app__image-effects">
-                <label for="none">None</label>
-                <input id="none" type="radio" name="effect" value="none" checked>
-                <label for="red">Reddish</label>
-                <input id="red" type="radio" name="effect" value="red">
-                <label for="rgb">RBG Split</label>
-                <input id="rgb" type="radio" name="effect" value="rgb">
-                <label for="blue">Blue</label>
-                <input id="blue" type="radio" name="effect" value="blue">
-            </div>
-            <div class="app__canvas-effects">
-                <label for="ghost">Ghosty</label>
-                <input id="ghost" type="range" min="0" max="1" step="0.05" value="1">
-            </div>
+        <h1 class="app__heading">Webcam Fun</h1>
+        <div class="app__photo-button"><a>Take Photo</a></div>
+        <div class="app__image-effects">
+            <input type="radio" id="none" name="radiogroup" value="none" checked>
+            <label for="none">None</label>
+            <input type="radio" id="red" name="radiogroup" value="red">
+            <label for="red">Reddish</label>
+            <input type="radio" id="rgb" name="radiogroup" value="rgb">
+            <label for="rgb">RGB Split</label>
+            <input type="radio" id="ghost" name="radiogroup" value="ghost">
+            <label for="ghost">Ghosty</label>
         </div>
         <canvas class="app__canvas"></canvas>
         <video class="app__video"></video>

@@ -2,9 +2,8 @@ const video = document.querySelector('.app__video')
 const canvas = document.querySelector('.app__canvas')
 let ctx = canvas.getContext('2d')
 const audioFx = document.querySelector('.audio')
-const photoButton = document.querySelector('button')
-const radioElements = document.querySelectorAll('.app__image-effects input[type="radio"]')
-const alphaElement = document.querySelector('.app__canvas-effects input[type="range"]')
+const photoButton = document.querySelector('a')
+const [radioNone, radioRed, radioRGB, radioAlpha] = document.querySelectorAll('.app__image-effects input[type="radio"]')
 let snapWrapper = document.querySelector('.app__snapshot-wrapper')
 let imageEffect = 'none'
 
@@ -21,17 +20,17 @@ function updateCanvas() {
     canvas.height = video.videoHeight
     canvas.width = video.videoWidth
     return setInterval(() => {
-        if (alphaElement.value !== 1) {
-            ctx.globalAlpha = alphaElement.value
+        if (imageEffect === 'ghost') {
+            ctx.globalAlpha = 0.1
+        } else {
+            ctx.globalAlpha = 1
         }
         ctx.drawImage(video, 0, 0, video.videoWidth, video.videoHeight)
         let imageData = ctx.getImageData(0, 0, video.videoWidth, video.videoHeight)
-        if (imageEffect !== 'none') {
+        if (imageEffect === 'red' || imageEffect === 'rgb') {
             imageData = new ImageData(applyImageEffect(imageData.data, imageEffect), canvas.width, canvas.height)
         }
-        if (alphaElement.value !== 1) {
-            ctx.globalAlpha = alphaElement.value
-        }
+
         ctx.putImageData(imageData, 0, 0)
     }, 16)
 }
@@ -52,7 +51,7 @@ function playAudioFx() {
 function takePhoto() {
     playAudioFx()
     if (snapWrapper.children.length === 6) {
-        snapshotWrapper.removeChild(snapWrapper.children[5])
+        snapWrapper.removeChild(snapWrapper.children[5])
     }
     const data = canvas.toDataURL('image/jpeg')
     snapWrapper.insertBefore(createPhotoLink(data), snapWrapper.firstChild)
@@ -64,10 +63,6 @@ function redEffect(pixels) {
         pixels[i+1] = pixels[i+1] - 50
         pixels[i+2] = pixels[i+2] * 0.5
     }
-    return pixels
-}
-
-function blueEffect(pixels) {
     return pixels
 }
 
@@ -86,13 +81,13 @@ function applyImageEffect(data, effect) {
             return redEffect(data)
         case 'rgb':
             return rgbEffect(data)
-        case 'blue':
-            return blueEffect(data)
     }
 }
 
 video.addEventListener('canplay', updateCanvas)
 photoButton.addEventListener('click', takePhoto)
-radioElements.forEach(el => el.addEventListener('change', (e) => imageEffect = e.target.value))
+document.querySelectorAll('.app__image-effects input[type="radio"]').forEach(
+    el => el.addEventListener('change', (e) => imageEffect = e.target.value)
+)
 
 getVideo()
