@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background: #ffc600;
+    font-family: 'Abel', sans-serif;
+}
+
+.heading {
+    font-size: 1.1rem;
+    padding: 5px 80px;
+    background: #333333;
+    color: #ffeeff;
+    position: fixed;
+    top: 0px;
+    left: -80px;
+    transform-origin: right;
+    transform: rotate(-45deg);
+}
+
+.heading:before, .heading:after {
+    position: absolute;
+    width: 44px;
+    height: calc(1rem + 1.1rem + 2px);
+    background: #333333;
+    color: black;
+    content: '';
+}
+
+.heading:before {
+    top: 0;
+    left: -40px;
+}
+
+.heading:after {
+    top: 0;
+    right: -40px;
+}
+
+.words {
+    width: 40rem;
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+    padding: 1rem 2rem 1rem 5rem;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 4px;
+    background-size: 100% 3rem;
+    position: relative;
+    line-height: 2rem;
+    font-size: 2rem;
+}
+
+.words p {
+    margin: 0 0 1rem;
+}
+
+.words:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 2rem;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent #efe4e4;
+}
+
+@media screen and (max-width: 1020px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    html {
+        font-size: 7px;
+    }
+}
