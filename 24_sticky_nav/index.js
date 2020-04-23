@@ -62,6 +62,7 @@ function updateMenu() {
 function newRecipeElement(recipe) {
     let newRecipe = document.createElement('div')
     newRecipe.classList.add('recipe')
+    console.log(recipe)
     newRecipe.dataset.name = recipe.shortTitle
 
     let ingredients = recipe.ingredients
