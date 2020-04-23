@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap');
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -71,6 +72,7 @@ body.fixed-nav .menu {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Bellota', cursive;
 }
 
 .menu__logo {
@@ -80,6 +82,7 @@ body.fixed-nav .menu {
     transition: all 0.5s;
     font-weight: 600;
     font-size: 30px;
+    font-family: inherit;
 }
 
 
