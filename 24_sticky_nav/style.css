@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
-html {
+*, *:before, *:after {
     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
     background: #eeeeee;
     font-family: 'helvetica neue';
     font-size: 20px;
     font-weight: 200;
 }
 
-body {
-    margin: 0;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 
 .recipe {
     max-width: 700px;
@@ -47,7 +44,7 @@ h1 {
     text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
 }
 
-nav {
+.menu {
     background: black;
     top: 0;
     width: 100%;
@@ -56,19 +53,19 @@ nav {
     z-index: 1;
 }
 
-body.fixed-nav nav {
+body.fixed-nav .menu {
     position: fixed;
     box-shadow: 0 5px 0 rgba(0,0,0,0.1);
 }
 
-nav ul {
+.menu__items {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
 }
 
-nav li {
+.menu__item {
     flex: 1;
     text-align: center;
     display: flex;
@@ -76,7 +73,7 @@ nav li {
     align-items: center;
 }
 
-li.logo {
+.menu__logo {
     max-width: 0;
     overflow: hidden;
     background: white;
@@ -85,15 +82,12 @@ li.logo {
     font-size: 30px;
 }
 
-li.logo a {
-    color: black;
-}
 
-.fixed-nav li.logo {
+.fixed-nav .menu__logo {
     max-width: 500px;
 }
 
-nav a {
+.menu a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;
@@ -102,42 +96,13 @@ nav a {
     text-transform: uppercase;
 }
 
-.recipe * {
-    font-family: 'Cormorant Infant', serif;
-}
-
-.recipe {
-    max-width: 880px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    padding: 80px 80px;
-}
-
-.recipe__title {
-    font-weight: 600;
-    font-size: 44px;
-}
-
-.recipe__introduction img {
-    width: 100%;
-}
-
-.recipe__nutrients, .recipe__ingredients, .recipe__instructions {
-    padding: 5px 20px;
-}
-
-.recipe__nutrients ul, .recipe__ingredients ul, .recipe__instructions ul {
-    text-align: center;
-    padding-left: 0;
-}
-
-.recipe__nutrients li, .recipe__ingredients li, .recipe__instructions li {
-    list-style: none;
-    margin-bottom: 10px;
+.menu__logo a {
+    color: black;
 }
 
 .highlighted a {
-    color: salmon;
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px solid #eee;
 }
 
 footer {

@@ -1,0 +1,45 @@
+.recipe * {
+    font-family: 'Cormorant Infant', serif;
+}
+
+.recipe {
+    max-width: 880px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 80px 80px;
+}
+
+.recipe__title {
+    font-weight: 600;
+    font-size: 44px;
+}
+
+.recipe__image {
+    width: 100%;
+}
+
+.recipe > * {
+    padding: 5px 20px;
+}
+
+.recipe p {
+    text-align: center;
+}
+
+.recipe ul {
+    padding-left: 0;
+}
+
+.recipe__nutrients ul {
+    display: flex;
+}
+
+.recipe li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.recipe__nutrients li {
+    flex: 1;
+    text-align: center;
+}

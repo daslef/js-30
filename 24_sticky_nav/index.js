@@ -1,7 +1,7 @@
 const url = 'https://raw.githubusercontent.com/daslef/js-30/master/24_sticky_nav/data.json'
 
-const nav = document.querySelector('nav'),
-    logo = document.querySelector('li.logo a'),
+const nav = document.querySelector('.menu'),
+    logo = document.querySelector('.menu__logo a'),
     main = document.querySelector('main'),
     footer = document.querySelector('footer')
 
@@ -55,7 +55,6 @@ function updateMenu() {
         return
     }
 
-
 }
 
 
@@ -77,22 +76,47 @@ function newRecipeElement(recipe) {
                 <div class="recipe__introduction">
                     <div class="recipe__title">${recipe.title}</div>
                     <p>ВРЕМЯ ПРИГОТОВЛЕНИЯ - ${recipe.duration} ЧАС</p>
-                    <img src="${recipe.imgSrc}">
+                    <img class="recipe__image" src="${recipe.imgSrc}">
                     <div class="recipe__nutrients">
-                        <ul>ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ НА ПОРЦИЮ</ul>
-                        <li>КАЛОРИЙНОСТЬ - ${recipe.nutrients['kkal']} ККАЛ</li>
-                        <li>БЕЛКИ - ${recipe.nutrients['protein']} ГРАММ</li>
-                        <li>ЖИРЫ ${recipe.nutrients['fat']} ГРАММ</li>
-                        <li>УГЛЕВОДЫ ${recipe.nutrients['carbo']} ГРАММ</li>
+                        <p>ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ НА ПОРЦИЮ</p>
+                        <ul>
+                            <li>${recipe.nutrients['kkal']} ккал.</li>
+                            <li>белки ${recipe.nutrients['protein']} г.</li>
+                            <li>жиры ${recipe.nutrients['fat']} г.</li>
+                            <li>углеводы ${recipe.nutrients['carbo']} г.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="recipe__ingredients">
-                    <ul>ИНГРЕДИЕНТЫ</ul>
-                    ${ingredients}
+                    <p>ИНГРЕДИЕНТЫ</p>
+                    <ul>${ingredients}</ul>
                 </div>
                 <div class="recipe__instructions">
-                    <ul>ИНСТРУКЦИЯ</ul>
-                    ${instruction}
+                    <p>ИНСТРУКЦИЯ</p>
+                    <ul>${instruction}</ul>
+                </div>
+                <div class="recipe__order-wrapper">
+                    <p>Заказать</p>
+                    <form class="recipe__order-form">
+                        <div class="recipe__order-row">
+                            <div class="recipe__order-col">
+                                <input type="text" id="firstname" name="firstname">
+                                <label for="firstname">First Name</label>
+                            </div>
+                            <div class="recipe__order-col">
+                                <input type="text" id="lastname" name="lastname">
+                                <label for="lastname">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="recipe__order-row">
+                            <input type="text" name="phone" id="phone">
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="recipe__order-row">
+                            <input type="text" name="address" id="address">
+                            <label for="address">Address</label>
+                        </div>
+                    </form>
                 </div>`
     return newRecipe
 }
