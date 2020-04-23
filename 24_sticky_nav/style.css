@@ -108,6 +108,7 @@ nav a {
 .recipe {
     max-width: 880px;
     margin: 0 auto;
+    margin-bottom: 40px;
     padding: 80px 80px;
 }
 
@@ -136,4 +137,9 @@ nav a {
 
 .highlighted a {
     color: salmon;
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
 }
