@@ -35,6 +35,7 @@
 }
 
 .recipe li {
+    position: relative;
     list-style: none;
     margin-bottom: 10px;
 }
@@ -42,4 +43,24 @@
 .recipe__nutrients li {
     flex: 1;
     text-align: center;
+}
+
+.recipe__ingredients li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe__ingredients li span {
+    background: white;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.recipe__ingredients li::before {
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    content: "";
+    z-index: -1;
+    border-bottom: 1px solid #b8b8b8;
 }

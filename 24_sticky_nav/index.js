@@ -65,11 +65,11 @@ function newRecipeElement(recipe) {
     newRecipe.dataset.name = recipe.shortTitle
 
     let ingredients = recipe.ingredients
-        .map(el => `<li>${el}</li>`)
+        .map(el => `<li><span>${el.split(',')[0]}</span><span>${el.split(',')[1]}</span></li>`)
         .join('')
 
     let instruction = recipe.instruction
-        .map(el => `<li>${el}</li>`)
+        .map(el => `<li><span>${el.split(',')[0]}</span><span>${el.split(',')[1]}</span></li>`)
         .join('')
 
     newRecipe.innerHTML = `
