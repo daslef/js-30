@@ -1,4 +1,4 @@
-const url = 'https://raw.githubusercontent.com/daslef/js-30/master/24_sticky_nav/data.json'
+const url = 'https://raw.githubusercontent.com/daslef/js-30/master/24_sticky_nav/assets/data.json'
 
 const nav = document.querySelector('.menu'),
     logo = document.querySelector('.menu__logo a'),
