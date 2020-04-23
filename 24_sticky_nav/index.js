@@ -1,22 +1,32 @@
 const url = 'https://raw.githubusercontent.com/daslef/js-30/master/24_sticky_nav/data.json'
 
-const nav = document.querySelector('nav')
-const main = document.querySelector('main')
-const footer = document.querySelector('footer')
+const nav = document.querySelector('nav'),
+    logo = document.querySelector('li.logo a'),
+    main = document.querySelector('main'),
+    footer = document.querySelector('footer')
+
 let topOfNav = nav.offsetTop;
 
-const recipeMenuIntroduction = document.querySelector('.recipe__introduction__menu')
-const recipeMenuIngredients = document.querySelector('.recipe__ingredients__menu')
-const recipeMenuInstructions = document.querySelector('.recipe__instructions__menu')
-const recipeMenuOrder = document.querySelector('.recipe__order__menu')
-const recipeMenuItems = [recipeMenuIntroduction, recipeMenuIngredients, recipeMenuInstructions, recipeMenuOrder]
+const recipeMenuIntroduction = document.querySelector('.recipe__introduction__menu'),
+    recipeMenuIngredients = document.querySelector('.recipe__ingredients__menu'),
+    recipeMenuInstructions = document.querySelector('.recipe__instructions__menu'),
+    recipeMenuOrder = document.querySelector('.recipe__order__menu'),
+    recipeMenuItems = [recipeMenuIntroduction, recipeMenuIngredients, recipeMenuInstructions, recipeMenuOrder]
 
 
-function setActiveMenuItem() {
+function setActiveMenuElement(activeElement) {
+    recipeMenuItems.filter(x => x !== activeElement).map(x => {
+        x.classList.remove('highlighted')
+    })
+    activeElement.classList.add('highlighted')
+}
 
-    let x = this.innerWidth / 2
-    let y = this.innerHeight / 3
-    let activeElement = document.elementFromPoint(x, y)
+
+function updateMenu() {
+
+    let x = this.innerWidth / 2,
+        y = this.innerHeight / 3,
+        activeElement = document.elementFromPoint(x, y)
 
     if (activeElement.tagName !== 'DIV') {
         activeElement = activeElement.parentElement
@@ -24,32 +34,35 @@ function setActiveMenuItem() {
 
     switch (activeElement.className) {
         case 'recipe__introduction':
-            recipeMenuItems.filter(x => x !== recipeMenuIntroduction).map(x => {
-                x.classList.remove('highlighted')
-            })
-            recipeMenuIntroduction.classList.add('highlighted')
+            setActiveMenuElement(recipeMenuIntroduction)
             break;
-
         case 'recipe__ingredients':
-            recipeMenuItems.filter(x => x !== recipeMenuIngredients).map(x => {
-                x.classList.remove('highlighted')
-            })
-            recipeMenuIngredients.classList.add('highlighted')
+            setActiveMenuElement(recipeMenuIngredients)
             break;
-
         case 'recipe__instructions':
-            recipeMenuItems.filter(x => x !== recipeMenuInstructions).map(x => {
-                x.classList.remove('highlighted')
-            })
-            recipeMenuInstructions.classList.add('highlighted')
+            setActiveMenuElement(recipeMenuInstructions)
             break;
     }
+
+    let parent = activeElement.parentElement
+
+    try {
+        while (parent.className !== 'recipe') {
+            parent = parent.parentElement
+        }
+        logo.textContent = parent.dataset['name']
+    } catch(e) {
+        return
+    }
+
+
 }
 
 
 function newRecipeElement(recipe) {
     let newRecipe = document.createElement('div')
     newRecipe.classList.add('recipe')
+    newRecipe.dataset.name = recipe
 
     let ingredients = recipe.ingredients
         .map(el => `<li>${el}</li>`)
@@ -106,5 +119,5 @@ window.addEventListener('scroll', () => {
         document.body.classList.remove('fixed-nav')
         document.body.style.paddingTop = 0
     }
-    setActiveMenuItem()
+    updateMenu()
 })
