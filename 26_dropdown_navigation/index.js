@@ -1,35 +1,32 @@
-const triggers = document.querySelectorAll('.menu__item')
-
-const menuSpan = document.createElement('span')
-menuSpan.classList.add('menu__highlight')
-document.body.appendChild(menuSpan)
-
-const submenuSpan = document.createElement('span')
-submenuSpan.classList.add('menu__background')
-document.body.appendChild(submenuSpan)
+const triggers = document.querySelectorAll('.cool > li');
+const background  = document.querySelector('.dropdownBackground');
+const nav  = document.querySelector('.top');
 
 function handleEnter() {
-    const {width: width, height: height, top: top, left: left} = this.getBoundingClientRect()
-    menuSpan.style.width = `${width}px`
-    menuSpan.style.height = `${height}px`
-    menuSpan.style.transform = `translate(${left}px, ${top}px)`
-    menuSpan.style.zIndex = "-1" //TODO
-    this.classList.add('active')
+    this.classList.add('trigger-enter');
+    setTimeout(() => this.classList.contains('trigger-enter') && this.classList.add('trigger-enter-active'), 150);
+    background.classList.add('open');
 
-    const {width: subWidth, height: subHeight, top: subTop, left: subLeft} = this.querySelector('.menu__submenu').getBoundingClientRect()
-    submenuSpan.classList.add('active')
-    submenuSpan.style.width = subWidth + 'px'
-    submenuSpan.style.height = subHeight + 'px'
-    submenuSpan.style.transform = `translate(${subLeft}px, ${subTop}px)`
-    submenuSpan.style.zIndex = "-1" //TODO
-    // setTimeout(() => submenuSpan.classList.add('show'), 500)
+    const dropdown = this.querySelector('.dropdown');
+    const dropdownCoords = dropdown.getBoundingClientRect();
+    const navCoords = nav.getBoundingClientRect();
+
+    const coords = {
+        height: dropdownCoords.height,
+        width: dropdownCoords.width,
+        top: dropdownCoords.top - navCoords.top,
+        left: dropdownCoords.left - navCoords.left
+    };
+
+    background.style.setProperty('width', `${coords.width + 40}px`);
+    background.style.setProperty('height', `${coords.height}px`);
+    background.style.setProperty('transform', `translate(${coords.left - 20}px, ${coords.top}px)`);
 }
 
 function handleLeave() {
-    this.classList.remove('active')
-    submenuSpan.classList.remove('active')
-    // setTimeout(() => submenuSpan.classList.remove('show'), 500)
+    this.classList.remove('trigger-enter', 'trigger-enter-active');
+    background.classList.remove('open');
 }
 
-triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter))
-triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
+triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
