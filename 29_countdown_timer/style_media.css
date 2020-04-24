@@ -1,0 +1,59 @@
+@media screen and (max-width: 1440px) {
+
+    .display__time-left {
+        font-size: 16rem;
+    }
+
+    .timer__controls * {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 970px) {
+
+    .display__time-left {
+        font-size: 12rem;
+    }
+
+    .timer__controls * {
+        font-size: 0.8rem;
+    }
+
+    .timer__manual {
+        padding: 1rem 0.5rem;
+    }
+
+    .display__end-time {
+        font-size: 3rem;
+    }
+
+}
+
+
+@media screen and (max-width: 720px) {
+
+    .timer__controls {
+        flex-direction: column;
+    }
+
+    .timer__controls * {
+        font-size: 1.1rem;
+    }
+
+    .timer__manual {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .display__time-left {
+        font-size: 28vw;
+    }
+
+    .display__end-time {
+        font-size: 7vw;
+    }
+
+}
