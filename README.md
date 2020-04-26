@@ -21,12 +21,12 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 1 - JavaScript Drum Kit
+#### Day 1 - JavaScript Drum Kit  ♥   
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small0.jpg" alt="JavaScript Drum Kit">
 
 ---
 
-#### Day 2 - CSS + JS Clock
+#### Day 2 - CSS + JS Clock  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small1.jpg" alt="CSS + JS Clock">
 
 ---
@@ -41,12 +41,12 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 5 - Flex Panels Image Gallery
+#### Day 5 - Flex Panels Image Gallery  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small4.jpg" alt="Flex Panels Image Gallery">
 
 ---
 
-#### Day 6 Ajax Type Ahead
+#### Day 6 Ajax Type Ahead  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small5.jpg" alt="Ajax Type Ahead">
 
 ---
@@ -66,17 +66,17 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 10 - Hold Shift to Check Multiple Checkboxes
+#### Day 10 - Hold Shift to Check Multiple Checkboxes  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small9.jpg" alt="Hold Shift to Check Multiple Checkboxes">
 
 ---
 
-#### Day 11 - Custom HTML5 Video Player
+#### Day 11 - Custom HTML5 Video Player  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small10.jpg" alt="Custom HTML5 Video Player">
 
 ---
 
-#### Day 12 - Key Sequence Detection (KONAMI CODE)
+#### Day 12 - Key Sequence Detection (KONAMI CODE)  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small11.jpg" alt="Key Sequence Detection (KONAMI CODE)">
 
 ---
@@ -91,12 +91,12 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 15 - LocalStorage and Event Delegation
+#### Day 15 - LocalStorage and Event Delegation  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small14.jpg" alt="LocalStorage and Event Delegation">
 
 ---
 
-#### Day 16 - CSS Text Shadow Mouse Move Effect
+#### Day 16 - CSS Text Shadow Mouse Move Effect  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small15.jpg" alt="CSS Text Shadow Mouse Move Effect">
 
 ---
@@ -111,12 +111,12 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 19 - Unreal Webcam Fun
+#### Day 19 - Unreal Webcam Fun  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small18.jpg" alt="Unreal Webcam Fun">
 
 ---
 
-#### Day 20 - Native Speech Recognition
+#### Day 20 - Native Speech Recognition  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small19.jpg" alt="Native Speech Recognition">
 
 ---
@@ -126,7 +126,7 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 22 - Follow Along Links
+#### Day 22 - Follow Along Links  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small21.jpg" alt="Follow Along Links">
 
 ---
@@ -136,7 +136,7 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 24 - Sticky Nav
+#### Day 24 - Sticky Nav  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small23.jpg" alt="Sticky Nav">
 
 ---
@@ -146,12 +146,12 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 26 - Stripe Follow Along Dropdown
+#### Day 26 - Stripe Follow Along Dropdown  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small25.jpg" alt="Stripe Follow Along Dropdown">
 
 ---
 
-#### Day 27 - Click and Drag to Scroll
+#### Day 27 - Click and Drag to Scroll  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small26.jpg" alt="Click and Drag to Scroll">
 
 ---
@@ -161,10 +161,10 @@ My favourite projects are labeled with the 'heart' symbol. There will be links t
 
 ---
 
-#### Day 29 - Countdown Clock
+#### Day 29 - Countdown Clock  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small28.jpg" alt="Countdown Clock">
 
 ---
 
-#### Day 30 - Whack A Mole Game
+#### Day 30 - Whack A Mole Game  ♥  
 <img src="https://res.cloudinary.com/wesbos/image/fetch/q_auto,f_auto/https://s3.amazonaws.com/js30-cdn/small29.jpg" alt="Whack A Mole Game">
