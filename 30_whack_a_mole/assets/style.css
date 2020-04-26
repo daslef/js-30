@@ -10,14 +10,14 @@ body {
     font-family: 'Amatic SC', cursive;
 }
 
-h1 {
+.game__title {
     text-align: center;
     font-size: 10rem;
     line-height: 1;
     margin-bottom: 0;
 }
 
-.score {
+.game__score {
     background: rgba(255,255,255,0.2);
     padding: 0 3rem;
     line-height: 1;
@@ -32,13 +32,13 @@ h1 {
     margin: 0 auto;
 }
 
-.hole {
+.game__hole {
     flex: 1 0 33.33%;
     overflow: hidden;
     position: relative;
 }
 
-.hole:after {
+.game__hole:after {
     display: block;
     background: url('dirt.svg') bottom center no-repeat;
     background-size: contain;
@@ -50,7 +50,7 @@ h1 {
     bottom: -30px;
 }
 
-.mole {
+.game__mole {
     background: url('mole.svg') bottom center no-repeat;
     background-size: 60%;
     position: absolute;
@@ -60,6 +60,17 @@ h1 {
     transition:all 0.4s;
 }
 
-.hole.up .mole {
+.game__hole.up .game__mole {
     top: 0;
+}
+
+.game__button-start {
+    position: relative;
+    left: -5px;
+    top: 120px;
+    background: none;
+    border: 2px solid;
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
 }
