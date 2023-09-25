@@ -14,7 +14,6 @@
 }
 
 .player_inactive {
-    position: fixed;
     right: -100px;
     top: -100px;
     transition: all 0.5s ease-in-out;
