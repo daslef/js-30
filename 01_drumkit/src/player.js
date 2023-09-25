@@ -6,7 +6,7 @@ const forwardButton = player.querySelector('button#forward')
 const backwardButton = player.querySelector('button#backward')
 const volumeBar = player.querySelector('input[type="range"]')
 const info = player.querySelector('.player__info')
-
+// titlessssssssssssssssssssssssssssssss
 const bgMusicFiles = [
     {"title": "Burial x Four Tet - Nove",
         "cover": "assets/music/burial.jfif",
