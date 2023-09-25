@@ -1,7 +1,7 @@
 const [hoursHand, minutesHand, secondsHand] = document.querySelectorAll('.clock__hand')
 
 setInterval(() => {
-    let currentDate = new Date()
+    const currentDate = new Date()
     let hour = currentDate.getHours()
     let minute = currentDate.getMinutes()
     let second = currentDate.getSeconds()
