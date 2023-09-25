@@ -10,7 +10,8 @@
 .player_active {
     position: fixed;
     right: 100px;
-    transition: right 1.5s ease, top 1.5s ease;
+    top: 100px;
+    transition: right 2s ease, top 2s ease;
 }
 
 .player_inactive {
