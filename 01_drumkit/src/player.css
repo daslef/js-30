@@ -1,20 +1,20 @@
 @import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300);
 
-.player, .player * {
+.player,
+.player * {
     box-sizing: border-box;
-    cursor: pointer;
+    cursor: default;
 }
 
 .player_active {
     position: fixed;
     right: 100px;
     top: 100px;
-    transition: right 1.5s ease, top 1.5s ease;
+    transition: right 2s ease, top 2s ease;
 }
 
 .player_inactive {
-    position: fixed;
     right: -100px;
     top: -100px;
     transition: all 0.5s ease-in-out;
@@ -146,13 +146,14 @@ input[type='range']::-webkit-slider-thumb {
 
 input[type='range']:hover::-webkit-slider-thumb {
     background: #26C5CB;
-    -webkit-transform:scale(2);
+    -webkit-transform: scale(2);
 }
 
 
 @media all and (max-width: 768px) {
 
-    .player, .player__ui {
+    .player,
+    .player__ui {
         width: 150px;
         height: 150px;
     }
